@@ -1,0 +1,34 @@
+\connect cs348_gp47
+
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('338240864', '318531901', '144.01', 'Chequing', '1958-01-21 23:51:26', '1958-01-21 23:51:26');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('489188093', '318531901', '7741.71', 'Credit', '2001-04-22 19:37:18', '2001-04-22 19:37:18');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('255471240', '318531901', '606.90', 'Saving', '1987-02-12 03:02:54', '1987-02-12 03:02:54');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('868183141', '267347253', '7617.81', 'Saving', '1927-10-30 00:44:33', '1927-10-30 00:44:33');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('247785346', '677600186', '8297.46', 'Saving', '1962-05-15 03:25:02', '1962-05-15 03:25:02');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('287623115', '677600186', '151.05', 'Credit', '1948-03-02 16:51:43', '1948-03-02 16:51:43');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('132142874', '677600186', '6394.20', 'Chequing', '1908-02-24 00:18:32', '1908-02-24 00:18:32');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('798111058', '666450014', '5618.94', 'Saving', '1982-03-21 07:37:12', '1982-03-21 07:37:12');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('064674836', '666450014', '85.41', 'Credit', '1929-09-11 18:45:44', '1929-09-11 18:45:44');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('055895670', '082650778', '9821.02', 'Saving', '1944-08-06 20:15:11', '1944-08-06 20:15:11');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('003152682', '552067063', '2611.75', 'Chequing', '1931-06-30 01:20:03', '1931-06-30 01:20:03');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('760539875', '810003432', '3021.35', 'Credit', '1994-10-30 02:27:19', '1994-10-30 02:27:19');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('826093704', '538906864', '97.04', 'Credit', '1956-01-26 03:26:59', '1956-01-26 03:26:59');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('047330567', '538906864', '942.18', 'Chequing', '1978-03-18 05:20:01', '1978-03-18 05:20:01');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('301146779', '538906864', '422.82', 'Saving', '1925-07-29 20:47:32', '1925-07-29 20:47:32');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('456408309', '484071172', '676.55', 'Credit', '1933-01-16 19:13:25', '1933-01-16 19:13:25');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('711163489', '484071172', '9870.84', 'Chequing', '1935-04-30 03:32:17', '1935-04-30 03:32:17');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('046221600', '447563329', '651.29', 'Chequing', '1983-02-12 19:07:33', '1983-02-12 19:07:33');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('654630086', '205928780', '9.99', 'Chequing', '1913-10-28 08:59:57', '1913-10-28 08:59:57');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('157171470', '205928780', '61.59', 'Credit', '2019-04-09 12:37:28', '2019-04-09 12:37:28');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('659406375', '875500646', '14.77', 'Chequing', '1905-08-31 12:49:08', '1905-08-31 12:49:08');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('712538557', '930438838', '434.11', 'Chequing', '1981-10-27 05:44:18', '1981-10-27 05:44:18');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('295345167', '198935402', '125.51', 'Credit', '2001-12-18 11:07:24', '2001-12-18 11:07:24');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('408899723', '772469003', '6550.64', 'Chequing', '1984-05-07 21:27:52', '1984-05-07 21:27:52');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('079540159', '464689032', '4830.62', 'Chequing', '1963-07-14 15:02:19', '1963-07-14 15:02:19');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('750709934', '464689032', '622.93', 'Credit', '2018-03-12 20:25:46', '2018-03-12 20:25:46');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('621718864', '464689032', '8861.25', 'Saving', '1976-03-30 13:41:54', '1976-03-30 13:41:54');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('080739560', '795265214', '2212.06', 'Chequing', '1917-12-26 01:57:24', '1917-12-26 01:57:24');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('437528729', '914109076', '215.95', 'Saving', '1962-07-16 09:19:56', '1962-07-16 09:19:56');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('286215076', '671666574', '2377.47', 'Saving', '1954-01-04 20:48:05', '1954-01-04 20:48:05');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('735177004', '024768995', '8542.07', 'Credit', '1921-01-05 01:47:20', '1921-01-05 01:47:20');
+insert into Account (AccountID, UserID, Balance, Type, DateCreated, DateUpdated) values ('756617072', '671666574', '6761.66', 'Saving', '1986-05-12 22:25:48', '1986-05-12 22:25:48');

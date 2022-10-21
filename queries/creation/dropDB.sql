@@ -1,0 +1,1 @@
+drop database if exists cs348_gp47;

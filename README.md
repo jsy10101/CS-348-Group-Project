@@ -12,6 +12,24 @@ This application aims simulate a bank. I will provide a comprehensive summary of
 
 - Install the yarn package manager (installation instructions can be found (here)[https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable]).
 
+- Install PostgreSQL on the platform you are using for testing. Instructions can be found (here)[https://www.postgresql.org/download/].
+
+- Make sure you can use the psql command in your shell.
+
+- Run the following commands in your shell
+  ```sudo -i -u postgres```
+  ```psql```
+  ```ALTER USER postgres WITH PASSWORD '<password>';```
+
+- Following this, log out as the postgres user.
+
+- Run
+```createdb <database> -U postgres```
+
+- Navigate to the .env file and replace the DEV_DATABASE_URL provided with `postgres://postgres:<password>@127.0.0.1:5432/<database>`
+
+- Please note: the above steps from postgres installation onwards are a stop-gap solution, and will be more streamlined before the next milestone. 
+
 - Navigate to the root directory of the project and run the following commands:
 `yarn install`
 `yarn start`
@@ -19,22 +37,22 @@ This application aims simulate a bank. I will provide a comprehensive summary of
 
 ### Creating and Loading the Database for Testing purposes:
 
-#### Method 1 - Running queries and testing locally with psql
+#### Running queries and testing locally with psql
 
  - Install PostgreSQL on the platform you are using for testing. Instructions can be found (here)[https://www.postgresql.org/download/].
 
- - Set up a Postges user with username and password of your liking.
+ - Make sure you can run the `psql` command on your shell.
 
- - Run the folloing commands in the project root directory:
-  `psql < createDB.sql` 
-  `psql -f db-creation/createtDB.sql`
-  `psql -f db-creation/createTables.sql`
-  `psql -f db-creation/populateTables.sql`
+ - Run the folloing commands in the queries/creation directory:
+  ```psql < createDB.sql``` 
+  ```psql < populateUsers.sql```
+  ```psql < populateAccounts.sql```
+  ```psql < populateTransactions.sql```
 
- - Test the raw SQL queries found in the queries folder and compare with the expected output files under queries/expectedOut.
+ - Test the SQL queries found in the queries folder with `psql` and compare with the expected output files under queries/expectedOut.
 
- - To remove all tables from SQL, run:
- `psql -f db-creation/dropTables.sql`
+ - To remove all tables, from the queries folder, run:
+ ```psql < creation/dropDB.sql```
 
 ### Members
 
@@ -43,12 +61,3 @@ This application aims simulate a bank. I will provide a comprehensive summary of
 - Maanav Rajesh
 - Preeti Valunjkar
 - Tanvi Ohri
-
-### Architecture
-
-- CS348/dev (dev branch)
-- CS348/prod (main branch)
-
-Refrain from pushing directly to prod
-Always pull from dev branch
-Create feature branches from dev and then push the feautre branch for review
