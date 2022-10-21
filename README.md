@@ -8,11 +8,11 @@ This application aims simulate a bank. I will provide a comprehensive summary of
 
 - Clone the GitHub repository to your local machine.
 
-- Install NodeJS v18.10.0 (installation instructions can be found (here)[https://nodejs.org/en/download/]).
+- Install NodeJS v18.10.0 (installation instructions can be found [here](https://nodejs.org/en/download/)).
 
-- Install the yarn package manager (installation instructions can be found (here)[https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable]).
+- Install the yarn package manager (installation instructions can be found [here](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable])).
 
-- Install PostgreSQL on the platform you are using for testing. Instructions can be found (here)[https://www.postgresql.org/download/].
+- Install PostgreSQL on the platform you are using for testing. Instructions can be found [here](https://www.postgresql.org/download/)).
 
 - Make sure you can use the psql command in your shell.
 
@@ -39,7 +39,7 @@ This application aims simulate a bank. I will provide a comprehensive summary of
 
 #### Running queries and testing locally with psql
 
- - Install PostgreSQL on the platform you are using for testing. Instructions can be found (here)[https://www.postgresql.org/download/].
+ - Install PostgreSQL on the platform you are using for testing. Instructions can be found [here](https://www.postgresql.org/download/).
 
  - Make sure you can run the `psql` command on your shell.
 
