@@ -61,3 +61,8 @@ This application aims simulate a bank. I will provide a comprehensive summary of
 - Maanav Rajesh
 - Preeti Valunjkar
 - Tanvi Ohri
+
+### Notes
+
+- References for mock-up frontend - MDN, https://reactjs.org/docs/getting-started.html
+- References for setting up sequelize ORM - https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp
