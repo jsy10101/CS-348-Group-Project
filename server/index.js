@@ -22,7 +22,9 @@ const AccountRouter = require('./routes/accounts');
 // const TransactionRouter = require('./routes/transactions');
 
 app.use('/users', UserRouter);
+
 app.use('/accounts', AccountRouter);
+
 // app.use('./transactions', TransactionRouter);
 
 app.listen(port, () => {
