@@ -26,11 +26,11 @@ router.route('/add').post((req, res) => {
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
     const mobileNo = req.body.mobileNo;
-    const EmailID = req.body.EmailID;
-    const Address = req.body.Address;
-    const Admin = req.body.Admin;
+    const emailID = req.body.emailID;
+    const address = req.body.address;
+    const admin = req.body.admin;
     
-    const newUser = new User({username, password, firstName, lastName, mobileNo, EmailID, Address, Admin});
+    const newUser = new User({username, password, firstName, lastName, mobileNo, emailID, address, admin});
   
     newUser.save()
       .then(() => res.json('User added!'))

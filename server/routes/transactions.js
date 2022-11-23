@@ -9,11 +9,11 @@ router.route('/').get((req, res) => {
     });
 
 router.route('/add').post((req, res) => {
-    const SenderID = mongoose.Types.ObjectId.createFromHexString(req.body.SenderID);
-    const ReceiverID = mongoose.Types.ObjectId.createFromHexString(req.body.ReceiverID);
-    const Amount = req.body.Amount;
+    const senderID = mongoose.Types.ObjectId.createFromHexString(req.body.senderID);
+    const receiverID = mongoose.Types.ObjectId.createFromHexString(req.body.receiverID);
+    const amount = req.body.amount;
     
-    const newTransaction = new Transaction({SenderID, ReceiverID, Amount});
+    const newTransaction = new Transaction({senderID, receiverID, amount});
     
     newTransaction.save()
         .then(() => res.json('Transaction added!'))

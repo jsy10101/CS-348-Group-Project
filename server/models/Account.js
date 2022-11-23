@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const AccountSchema = new Schema({
-    UserID:     {type: mongoose.Schema.Types.ObjectId,
+    userID:     {type: mongoose.Schema.Types.ObjectId,
                 ref: 'User',
                 required: true,},
     balance:    {type: Number,

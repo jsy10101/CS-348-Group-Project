@@ -1,10 +1,10 @@
 .header {
-    background-color: lightgray;
-    padding: 2rem;
+    background-color: teal;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 2.4rem;
+    margin: 0;
   }
   
   .logo {
@@ -18,3 +18,4 @@
     justify-content: center;
     gap: 20px;
   }
+

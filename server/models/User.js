@@ -19,12 +19,12 @@ const UserSchema = new Schema({
                 unique: true,
                 trim: true,
                 minLength: 10},
-    EmailID:    {type: String,
+    emailID:    {type: String,
                 required: true,
                 unique: true,
                 trim: true,},
-    Address:    [{line1: String, line2: String, pin: Number}],
-    Admin:      Boolean,
+    address:    [{line1: String, line2: String, pin: Number}],
+    admin:      Boolean,
     }, {
         timestamps: true,
     });
