@@ -22,7 +22,7 @@ router.route('/:userID/:accountID').get((req, res) => {
     });
 
 router.route('/add').post((req, res) => {
-    const userID = mongoose.Types.ObjectId.createFromHexString(req.body.userID);
+    const userID = req.body.userID;
     const type = req.body.type;
     const balance = req.body.balance;
     

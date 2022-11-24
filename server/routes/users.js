@@ -29,6 +29,7 @@ router.route('/:id').delete((req, res) => {
 router.route('/add').post(async(req, res) => {
   const hashedPass = await bcrypt.hash(req.body.password, 10);
   const user = new User({
+    _id: req.body._id,
     username: req.body.username,
     password: hashedPass,
     firstName: req.body.firstName,
@@ -42,7 +43,7 @@ router.route('/add').post(async(req, res) => {
       const savedUser = await user.save();
       res.send(savedUser);
   } catch(err) {
-      res.status(400).send(err);
+    res.status(400).json('Error: ' + err);
   }
 });
 
