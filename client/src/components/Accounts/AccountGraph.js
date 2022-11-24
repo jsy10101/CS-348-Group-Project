@@ -27,7 +27,7 @@ export default function AccountGraph({accountID}) {
     const [expenditureMap, setExpenditureMap] = React.useState(null);
     const [duration, setDuration] = React.useState(7);
     React.useEffect(() =>
-    {axios.post('http://localhost:3030/transactions/', {AccountID:accountID ,duration:duration})
+    {axios.post('http://localhost:3030/transactions/', {accountID:accountID ,duration:duration})
                               .then((response) => {setExpenditureMap(response.data.map(e => {return {createdAt: e.createdAt, Amount: e.Amount}}).sort((a,b) => {
                                 var date1 = new Date(a.createdAt);
                                 var date2 = new Date(b.createdAt);

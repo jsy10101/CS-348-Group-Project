@@ -9,8 +9,13 @@ const port = process.env.PORT || 3030;
 
 app.use(cors());
 app.use(express.json());
+var uri="";
+if (process.env.ENV === 'Test') { 
+  uri = process.env.TEST_ATLAS_URI;
+} else {
+  uri = process.env.PROD_ATLAS_URI;
+}
 
-const uri = process.env.ATLAS_URI;
 mongoose.connect(uri);
 const connection = mongoose.connection;
 connection.once('open', () => {

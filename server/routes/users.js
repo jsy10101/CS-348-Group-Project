@@ -34,9 +34,9 @@ router.route('/add').post(async(req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     mobileNo: req.body.mobileNo,
-    EmailID: req.body.EmailID,
-    Address: req.body.Address,
-    Admin: req.body.Admin
+    emailID: req.body.emailID,
+    address: req.body.address,
+    admin: req.body.admin
   });
   try{
       const savedUser = await user.save();

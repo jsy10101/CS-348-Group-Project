@@ -10,21 +10,21 @@ router.route('/').get((req, res) => {
 
 router.route('/').post((req, res) => {
     if (req.body.duration == 0) {
-        Transaction.where({SenderID:req.body.AccountID})
+        Transaction.where({senderID: req.body.accountID})
              .then(transactions => res.json(transactions))
             .catch(err => res.status(400).json('Error: ' + err));
     } else {
         var startDate = new Date();
         startDate.setDate(startDate.getDate() - req.body.duration);
-        Transaction.where('SenderID',req.body.AccountID)
+        Transaction.where('senderID',req.body.accountID)
             .where('createdAt').gte(startDate)
             .then(transactions => res.json(transactions))
             .catch(err => res.status(400).json('Error: ' + err));
     }});
 
 router.route('/add').post((req, res) => {
-    const senderID = mongoose.Types.ObjectId.createFromHexString(req.body.senderID);
-    const receiverID = mongoose.Types.ObjectId.createFromHexString(req.body.receiverID);
+    const senderID = req.body.senderID;
+    const receiverID = req.body.receiverID;
     const amount = req.body.amount;
     
     const newTransaction = new Transaction({senderID, receiverID, amount});
