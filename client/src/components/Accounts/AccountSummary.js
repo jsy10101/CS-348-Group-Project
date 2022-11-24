@@ -1,4 +1,5 @@
 import React from 'react'
+import AccountCard from "../AccountDetail/AccountCard";
 
 export default function AccountSummary() {
     return (
