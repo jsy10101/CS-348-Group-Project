@@ -7,7 +7,7 @@ export default function Main() {
     return (
         <div className={classes.main}>
             <AccountSummary />
-            <AccountGraph />    
+            <AccountGraph accountID="637d79920e16a1a7afc28205" duration="7" />    
         </div>
     )
 }
