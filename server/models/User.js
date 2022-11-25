@@ -24,7 +24,7 @@ const UserSchema = new Schema({
                 required: true,
                 unique: true,
                 trim: true,},
-    address:    [{line1: String, line2: String, pin: Number}],
+    address:    [{line1: String, line2: String, pin: String}],
     admin:      Boolean,
     }, {
         timestamps: true,
