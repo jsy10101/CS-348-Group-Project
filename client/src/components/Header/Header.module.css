@@ -7,9 +7,9 @@
     margin: 0;
   }
   
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
+  .logo img {
+    width: 200px;
+    height: 50%;
   }
   
   .nav {

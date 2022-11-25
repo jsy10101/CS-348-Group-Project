@@ -1,12 +1,16 @@
 import React from "react";
-import Header from "./components/Header/Header"
 import Main from "./components/Main/Main"
+import Login from "./components/Authentication/Login"
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-        <Header />
-        <Main />
+        <Routes>
+            <Route index element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard/:id" element={<Main />} />
+        </Routes>
     </ >
   );
 }
