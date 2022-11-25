@@ -33,20 +33,6 @@ async function fetchUser(i){
   }
   // console.log(obj)
   users.push(obj)
-
-  // if( i == 99 ) {
-  //   setTimeout(() => {
-  // console.log(users.length);
-  //   const fs = require('fs'); 
-  // const data = JSON.stringify(users);
-  // fs.writeFile('files.json', data,  err=> { 
-  // if(err) { 
-  // throw err; 
-  // } 
-  // }); 
-  //   }, 60000);
-  //  }
-
 })
 
   .catch(errorMsg => console.log(errorMsg));
