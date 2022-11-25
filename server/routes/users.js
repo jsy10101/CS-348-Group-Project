@@ -57,9 +57,8 @@ router.route('/login').post(async(req, res) => {
   if (!validPass) {
     return res.status(400).send('Password incorrect');
   } 
-  const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
+  const token = user._id.toString();
   res.header('auth-token', token).send(token);
-  // res.send('Logged in!')
 });
 
 // Token Validation Function
