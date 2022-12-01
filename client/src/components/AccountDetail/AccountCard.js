@@ -6,7 +6,10 @@ import logo from "../../assets/BANKLOGO.png"
 import { Card, CardActions } from '@mui/material';
 
 export default function AccountCard({type, balance, accountId}) {
-  const upperacc = String(accountId).toUpperCase();
+  var str = String(accountId).toUpperCase();
+  var stars = "****";
+  var str2 = str.substring(str.length - 4, str.length);
+
   return (
     <Card style={{backgroundColor: "teal"}} sx={{ minWidth: 260, minHeight: 225 }}>
       <CardContent>
@@ -26,8 +29,8 @@ export default function AccountCard({type, balance, accountId}) {
             </tr>
           </tbody>
         </table>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary" style={{color: "white", fontSize: '15px'}}>
-          {upperacc}
+        <Typography sx={{ mb: 1.5 }} color="text.secondary" style={{color: "white", letterSpacing: 3, fontSize: '15px'}}>
+          {stars} &nbsp;{stars} &nbsp;{stars} &nbsp;{str2}
         </Typography>
       </CardContent>
       <CardActions>
@@ -36,4 +39,5 @@ export default function AccountCard({type, balance, accountId}) {
       <img src={logo} alt="Bank Logo" width={275} height={100} align="right" />
     </Card>
   );
+
 }
