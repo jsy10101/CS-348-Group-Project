@@ -1,13 +1,11 @@
-import React from 'react'
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import logo from "../../assets/BANKLOGO.png"
+import { Card, CardActions } from '@mui/material';
 
 export default function AccountCard({type, balance, accountId}) {
-  const upperacc = accountId.toUpperCase();
+  const upperacc = String(accountId).toUpperCase();
   return (
     <Card style={{backgroundColor: "teal"}} sx={{ minWidth: 260, minHeight: 225 }}>
       <CardContent>
