@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AccountCard from "../AccountDetail/AccountCard";
 import TotalAccount from "../AccountDetail/TotalAccount";
-import BankCard from "../BankCard/BankCard";
 import axios from 'axios';
 
 export default function AccountSummary({uid}) {
