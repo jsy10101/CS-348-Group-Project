@@ -27,11 +27,13 @@ export default function AccountSummary({uid}) {
                 <h2>Debit</h2>
             </div>
             {!!chequing && <AccountCard type={chequing.type} balance={chequing.balance} accountId={chequing._id} />}
-            {!!saving &&
+            {!!saving
+             &&
                 <div>
-                    <h2>Saving</h2>
-                </div>
+                    <h2></h2>
+                 </div>
             }
+
             {!!saving && <AccountCard type={saving.type} balance={saving.balance} accountId={saving._id} />}
             {!!chequing &&
                 <div>

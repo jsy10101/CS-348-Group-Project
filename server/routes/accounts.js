@@ -31,8 +31,10 @@ router.route('/add').post((req, res) => {
     const userID = req.body.userID;
     const type = req.body.type;
     const balance = req.body.balance;
+    const createdAt =  req.body.createdAt;
+    const updatedAt = req.body.updatedAt;
     
-    const newAccount = new Account({userID, balance, type});
+    const newAccount = new Account({userID, balance, type, createdAt, updatedAt});
   
     newAccount.save()
       .then(() => res.json('Account added!'))

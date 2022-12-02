@@ -25,8 +25,10 @@ router.route('/add').post((req, res) => {
     const senderID = req.body.senderID;
     const receiverID = req.body.receiverID;
     const amount = req.body.amount;
+    const createdAt =  req.body.createdAt;
+    const updatedAt = req.body.updatedAt;
     
-    const newTransaction = new Transaction({senderID, receiverID, amount});
+    const newTransaction = new Transaction({senderID, receiverID, amount, createdAt, updatedAt});
     
     newTransaction.save()
         .then(() => res.json('Transaction added!'))

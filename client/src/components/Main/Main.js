@@ -2,10 +2,11 @@ import React from 'react'
 import classes from './Main.module.css'
 import AccountSummary from '../Accounts/AccountSummary'
 import AccountGraph from '../Accounts/AccountGraph'
-import Header from "../Header/Header"
+import Navbar from '../Navbar/Navbar.js'
 import { useParams } from 'react-router-dom'
 import DGrid from '../Transaction/TransactionList'
 import axios from 'axios'
+
 
 export default function Main() {
     const userId = useParams();
@@ -21,7 +22,8 @@ export default function Main() {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
+            <Navbar></Navbar>
             <div className={classes.main}>
                 {!!userId.id && <AccountSummary uid={userId.id} />}
                 {console.log(userAccounts)}

@@ -37,7 +37,9 @@ router.route('/add').post(async(req, res) => {
     mobileNo: req.body.mobileNo,
     emailID: req.body.emailID,
     address: req.body.address,
-    admin: req.body.admin
+    admin: req.body.admin,
+    createdAt: req.body.createdAt,
+    updatedAt: req.body.updatedAt
   });
   try{
       const savedUser = await user.save();
@@ -45,6 +47,21 @@ router.route('/add').post(async(req, res) => {
   } catch(err) {
     res.status(400).json('Error: ' + err);
   }
+});
+
+// Update User
+router.route('/:_id').post((req, res) => {
+  User.findById(req.params._id)
+    .then(user => {
+      user.firstName = req.body.firstName;
+      user.lastName = req.body.lastName;
+      user.mobileNo = req.body.mobileNo;
+      user.address = req.body.address;
+      user.save()
+        .then(() => res.json('User updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
 // Login Route

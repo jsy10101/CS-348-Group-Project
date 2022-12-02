@@ -1,0 +1,8 @@
+.logo{
+  max-width: 15rem;
+}
+
+.toolbar{
+  display: flex;
+  justify-content: right;
+}
