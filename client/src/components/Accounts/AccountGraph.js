@@ -25,10 +25,11 @@ ChartJS.register(
 
 export default function AccountGraph({accountID}) {
     const [expenditureMap, setExpenditureMap] = React.useState(null);
-    const [duration, setDuration] = React.useState(7);
+    const [duration, setDuration] = React.useState(0);
     React.useEffect(() =>
-    {axios.post('http://localhost:3030/transactions/', {accountID:accountID ,duration:duration})
-                              .then((response) => {setExpenditureMap(response.data.map(e => {return {createdAt: e.createdAt, Amount: e.Amount}}).sort((a,b) => {
+    { axios.post('http://localhost:3030/transactions/', {accountID:accountID ,duration:duration})
+                              .then((response) => {
+                                setExpenditureMap(response.data.map(e => {return {createdAt: e.createdAt, amount: e.amount}}).sort((a,b) => {
                                 var date1 = new Date(a.createdAt);
                                 var date2 = new Date(b.createdAt);
                                 return date1 - date2}))})
@@ -54,13 +55,12 @@ export default function AccountGraph({accountID}) {
         dates.push(formattedDate);
         expenditure.push(0);
         counter++;
-        expenditure[counter] += expenditureMap[i].Amount;
+        expenditure[counter] += expenditureMap[i].amount;
       } else {
-        expenditure[counter] += expenditureMap[i].Amount;
+        expenditure[counter] += expenditureMap[i].amount;
       }
     }
     expenditure[counter] += currentExpenditure;
-    console.log(dates, expenditure)
     const data = {
       labels: dates,
       datasets: [
@@ -77,7 +77,7 @@ export default function AccountGraph({accountID}) {
       plugins: {
         title: {
           display: true,
-          text: 'Expenditure over the past ' + duration + ' days',
+          text: 'Expenditure over the past ' + ((duration == 0) ? '' : duration + ' days'),
         },
       },
     };
@@ -94,9 +94,10 @@ export default function AccountGraph({accountID}) {
             label="Duration"
             onChange={changeDuration}
           >
-            <MenuItem value={7}>Week</MenuItem>
-            <MenuItem value={14}>2 Weeks</MenuItem>
-            <MenuItem value={28}>4 Weeks</MenuItem>
+            <MenuItem value={30}>1 Month</MenuItem>
+            <MenuItem value={120}>4 Months</MenuItem>
+            <MenuItem value={180}>6 Months</MenuItem>
+            <MenuItem value={0}>All time</MenuItem>
           </Select>
         </FormControl>
       </Box>

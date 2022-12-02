@@ -11,7 +11,7 @@ export default function Header() {
         </div>
         <div>
           <ul className={classes.nav}>
-            <Link classname="link">Transfer</Link>
+            <Link className="link">Transfer</Link>
             <Link className="link">Edit Profile</Link>
           </ul>
         </div>

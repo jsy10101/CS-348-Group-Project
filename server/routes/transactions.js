@@ -10,14 +10,13 @@ router.route('/').get((req, res) => {
 
 router.route('/').post((req, res) => {
     if (req.body.duration == 0) {
-        Transaction.where({senderID: req.body.accountID})
+        Transaction.find({senderID: req.body.accountID})
              .then(transactions => res.json(transactions))
             .catch(err => res.status(400).json('Error: ' + err));
     } else {
         var startDate = new Date();
         startDate.setDate(startDate.getDate() - req.body.duration);
-        Transaction.where('senderID',req.body.accountID)
-            .where('createdAt').gte(startDate)
+        Transaction.find({senderID : req.body.accountID, createdAt : {$gte : startDate}})
             .then(transactions => res.json(transactions))
             .catch(err => res.status(400).json('Error: ' + err));
     }});
