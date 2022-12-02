@@ -4,7 +4,6 @@ import AccountSummary from '../Accounts/AccountSummary'
 import AccountGraph from '../Accounts/AccountGraph'
 import Navbar from '../Navbar/Navbar.js'
 import { useParams } from 'react-router-dom'
-import DGrid from '../Transaction/TransactionList'
 import axios from 'axios'
 
 
@@ -26,6 +25,7 @@ export default function Main() {
             <Navbar></Navbar>
             <div className={classes.main}>
                 {!!userId.id && <AccountSummary uid={userId.id} />}
+
                 <ul>
                     {userAccounts.map(acc => {return (
                         <li key={acc._id}>
