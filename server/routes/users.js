@@ -47,6 +47,21 @@ router.route('/add').post(async(req, res) => {
   }
 });
 
+// Update User
+router.route('/:_id').post((req, res) => {
+  User.findById(req.params._id)
+    .then(user => {
+      user.firstName = req.body.firstName;
+      user.lastName = req.body.lastName;
+      user.mobileNo = req.body.mobileNo;
+      user.address = req.body.address;
+      user.save()
+        .then(() => res.json('User updated!'))
+        .catch(err => res.status(400).json('Error: ' + err));
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 // Login Route
 router.route('/login').post(async(req, res) => {
   const user = await User.findOne({username: req.body.username});
