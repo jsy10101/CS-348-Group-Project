@@ -29,15 +29,19 @@ router.route('/:id').delete((req, res) => {
 router.route('/add').post(async(req, res) => {
   const hashedPass = await bcrypt.hash(req.body.password, 10);
   const user = new User({
-    _id: req.body._id,
+    _id: req.body._id || 101,
     username: req.body.username,
     password: hashedPass,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     mobileNo: req.body.mobileNo,
     emailID: req.body.emailID,
-    address: req.body.address,
-    admin: req.body.admin,
+    address: req.body.address || [{
+            line1: '',
+            line2: '',
+            pin: '',
+    }],
+    admin: req.body.admin || false,
     createdAt: req.body.createdAt,
     updatedAt: req.body.updatedAt
   });
