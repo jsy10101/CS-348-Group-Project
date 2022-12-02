@@ -16,11 +16,8 @@ function App() {
             <Route path="/dashboard/:id" element={<Main />} />
             <Route path="/admin/add-user" element={<Admin />} />
             <Route path="/edit-profile/:id" element={<EditUserProfile />} />
-<<<<<<< HEAD
             <Route path="/move-money/:id" element={<MoveMoney />} />
-=======
             <Route path="/transaction/:accountId" element={<TransactionList />} />
->>>>>>> 9fd340fe0874fe7a1942360a8518222db258ad20
         </Routes>
     </ >
   );
