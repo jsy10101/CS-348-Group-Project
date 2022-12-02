@@ -22,6 +22,10 @@ export default function Navbar() {
 
     const navItems = [
         {
+            name: "Move Money",
+            link: `/move-money/${id}`
+        },
+        {
             name: "Profile", 
             link: `/edit-profile/${id}`
         },
