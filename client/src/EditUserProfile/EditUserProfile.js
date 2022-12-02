@@ -1,7 +1,8 @@
-import { Alert, Box, Divider, Grid, Snackbar, TextField, Typography } from '@mui/material'
-import LoadingButton from '@mui/lab/LoadingButton';
+import { Alert, Box, Button, Divider, Grid, Snackbar, TextField, Typography } from '@mui/material'
+import LoadingButton from '@mui/lab/LoadingButton'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import axios from 'axios'
 
 export default function EditUserProfile() {
@@ -9,6 +10,7 @@ export default function EditUserProfile() {
     const [userData, setUserData] = useState({})
     const [loading, setLoading] = useState(false)
     const [open, setOpen] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const url = "http://localhost:3030/users/" + id
@@ -53,15 +55,6 @@ export default function EditUserProfile() {
             address: [{
                 ...prevState.address[0],
                 line2: event.target.value
-            }]
-        }))
-    }
-    const handleChangeL3 = (event) => {
-        setUserData(prevState => ({
-            ...prevState,
-            address: [{
-                ...prevState.address[0],
-                line3: event.target.value
             }]
         }))
     }
@@ -161,14 +154,6 @@ export default function EditUserProfile() {
                 </Grid>
                 <Grid item>
                     <TextField
-                        label="Line 3"
-                        style= {{width: 400}}
-                        value={(userData.address && userData.address[0].line3) || ''}
-                        onChange={handleChangeL3}
-                    ></TextField>
-                </Grid>
-                <Grid item>
-                    <TextField
                         label="Pin Code"
                         style= {{width: 400}}
                         value={(userData.address && userData.address[0].pin) || ''}
@@ -185,6 +170,17 @@ export default function EditUserProfile() {
                     >
                         Update
                     </LoadingButton>
+                </Grid>
+                <Grid item>
+                    <Button
+                        onClick={() => navigate(-1)}
+                        variant="outlined"
+                        startIcon={<ArrowBackIcon />}
+                        style={{borderColor: "teal", width: 400}}
+                        size="large"
+                    >
+                        Back to Dashboard
+                    </Button>
                 </Grid>
             </Grid>
         </Box>

@@ -2,7 +2,6 @@ import React from 'react'
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import logo from "../../assets/BANKLOGO.png"
 import { Card, CardActions } from '@mui/material';
 
 export default function AccountCard({type, balance, accountId}) {
@@ -38,7 +37,6 @@ export default function AccountCard({type, balance, accountId}) {
         <Button variant="contained" style={{backgroundColor: "rgba(0,0,0,0.8"}} size="small">Details</Button>
 
       </CardActions>
-      {/* <img src={logo} alt="Bank Logo" width={230} height={100} align="right" /> */}
     </Card>
   );
 

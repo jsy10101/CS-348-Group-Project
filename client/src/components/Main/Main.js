@@ -3,7 +3,6 @@ import classes from './Main.module.css'
 import AccountSummary from '../Accounts/AccountSummary'
 import AccountGraph from '../Accounts/AccountGraph'
 import Navbar from '../Navbar/Navbar.js'
-import Header from "../Header/Header"
 import { useParams } from 'react-router-dom'
 
 
