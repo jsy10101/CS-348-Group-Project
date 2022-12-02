@@ -1,9 +1,12 @@
 import React from 'react';
 import classes from "./Header.module.css";
 import logo from "../../assets/BANKLOGO.png"
-import { Link } from "@mui/material"
+import { Link } from "react-router-dom"
+import { useParams } from 'react-router';
 
 export default function Header() {
+    const { id } = useParams();
+
     return (
       <div className={classes.header}>
         <div className={classes.logo}>
@@ -11,8 +14,8 @@ export default function Header() {
         </div>
         <div>
           <ul className={classes.nav}>
-            <Link classname="link">Transfer</Link>
-            <Link className="link">Edit Profile</Link>
+            <Link to={`/edit-profile/${id}`} >Edit Profile</Link>
+            <Link to={'/login'} >Log Out</Link>
           </ul>
         </div>
       </div>
