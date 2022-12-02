@@ -3,6 +3,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Card, CardActions } from '@mui/material';
+import {Link} from 'react-router-dom';
 
 export default function AccountCard({type, balance, accountId}) {
   var str = String(accountId).toUpperCase();
@@ -34,7 +35,7 @@ export default function AccountCard({type, balance, accountId}) {
       </CardContent>
  
       <CardActions sx={{ display: "flex", flexDirection: "row", justifyContent: "flex-end"} } >
-        <Button variant="contained" style={{backgroundColor: "rgba(0,0,0,0.8"}} size="small">Details</Button>
+        <Button variant="contained" style={{backgroundColor: "rgba(0,0,0,0.8"}} size="small" component={Link} to={'/transaction/' + accountId}>Details</Button>
 
       </CardActions>
     </Card>
