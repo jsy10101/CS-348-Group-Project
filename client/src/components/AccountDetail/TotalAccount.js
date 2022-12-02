@@ -6,19 +6,19 @@ import Typography from '@mui/material/Typography';
 
 export default function TotalAccount({type, balance}) {
   return (
-    <Card style={{backgroundColor: 'rgba(152, 255, 152, 0.5)'}} sx={{ minWidth: 275 }}>
+    <Card style={{backgroundColor: "rgba(0,0,0,0.90)"}} sx={{}}>
       <CardContent>
         <table width="100%">
           <tbody>
             <tr>
               <td>
-                <Typography variant="h5" component="div">
+                <Typography variant="h5" component="div" style={{color: "white", fontSize: '21px', textTransform: "uppercase", fontWeight:"normal" }}>
                   {type}
                 </Typography>
               </td>
               <td>
-                <Typography align="right" variant="h5" component="div">
-                  $ {balance}
+                <Typography align="right" variant="h5" component="div" style={{color: "white",  textTransform: "uppercase", fontWeight:"bold" }}>
+                  $ {balance.toFixed(2)}
                 </Typography>
               </td>
             </tr>
