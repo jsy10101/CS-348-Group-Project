@@ -26,7 +26,6 @@ export default function Main() {
             <Navbar></Navbar>
             <div className={classes.main}>
                 {!!userId.id && <AccountSummary uid={userId.id} />}
-                {console.log(userAccounts)}
                 <ul>
                     {userAccounts.map(acc => {return (
                         <li key={acc._id}>
@@ -35,8 +34,6 @@ export default function Main() {
                         </li>)
                         })}
                 </ul>
-                
-                <h2>test</h2>
             </div>
         </>
     )

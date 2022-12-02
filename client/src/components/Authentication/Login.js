@@ -19,9 +19,8 @@ export default function Login() {
     }
 
     const handleClick = async () => {
-        console.log(loginData);
         try {
-            const response = await axios.post('http://localhost:3030/users/login', {username: loginData.username, password: loginData.password});
+            const response = await axios.post('http://localhost:3030/users/authenticate/login', {username: loginData.username, password: loginData.password});
             if(response.status === 200) {
                 navigate("/dashboard/" + response.data);
             }
@@ -79,11 +78,6 @@ export default function Login() {
                 >
                     Sign in
                 </Button>
-                <Typography >
-                     <Link href="#" >
-                        Forgot password ?
-                </Link>
-                </Typography>
             </Paper>
         </Grid>
     )

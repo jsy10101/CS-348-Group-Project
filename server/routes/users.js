@@ -65,7 +65,7 @@ router.route('/:_id').post((req, res) => {
 });
 
 // Login Route
-router.route('/login').post(async(req, res) => {
+router.route('/authenticate/login').post(async(req, res) => {
   const user = await User.findOne({username: req.body.username});
   if (!user) {
     return res.status(400).send('Username or password incorrect');
