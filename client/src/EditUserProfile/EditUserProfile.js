@@ -12,14 +12,10 @@ export default function EditUserProfile() {
 
     useEffect(() => {
         const url = "http://localhost:3030/users/" + id
-        try {
-            axios.get(url).then(res => {
-                const data = res.data
-                setUserData(data);
-            })
-        } catch(err) {
-            console.err(err);
-        }
+        axios.get(url).then(res => {
+            const data = res.data
+            setUserData(data);
+        }).catch(err => console.log(err))
     }, [id])
 
     const handleUpdateClick = () => {
