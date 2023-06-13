@@ -1,4 +1,4 @@
-# CS-348-Group-Project
+# WatBank
 
 ### Overview
 
